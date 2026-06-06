@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Rubik+Marker+Hatch&display=swap');
+
+body {
+    font-family: Kelly Slab, serif;
+    background: linear-gradient(to right, rgb(30, 1, 157), rgb(30, 45, 30), rgb(0, 73, 6));
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/* убираем отступы */
+body {
+    margin: 0;
+    padding: 0;
+}
+ 
+
+
+
+
+
+/* заголовок */
+header {
+    z-index: 10;
+    background-color: rgb(14, 0, 70);
+}
+
+.navbar {
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo img {
+    width: 25em;
+}
+
+.logo img:hover {
+    opacity: 0.8;
+}
+
+.nav-list {
+    display: flex;
+
+}
+
+.nav-list a {
+
+    color: rgb(64, 255, 0);
+    display: block;
+    padding: 0.9em;
+    font-size: 1.2em;
+    border-radius: 15px;
+}
+
+#active {
+    color: rgb(187, 255, 187);
+}
+
+.nav-list a:hover {
+    transition: 0.2s;
+
+    background-color: rgb(23, 0, 113);
+
+    color: rgb(255, 251, 0);
+    box-shadow: 0px 0px 15px rgb(255, 251, 0);
+}
+
+.burger-container {
+    display: none;
+}
+
+.nav-list-2,
+.nav-list-3,
+.nav-list-2-1,
+.nav-list-2-11,
+.nav-list-2-2 {
+    display: none;
+}
+
+.nav-countries-resorts:hover .nav-list-2,
+.nav-about-company:hover .nav-list-3,
+.nav-turkey:hover .nav-list-2-1,
+.nav-thailand:hover .nav-list-2-11,
+.nav-winter:hover .nav-list-2-2 {
+    display: block;
+    position: absolute;
+    box-shadow: 0px 0px 5px rgb(255, 251, 0);
+    background-color: rgb(23, 0, 113);
+
+    border-radius: 15px;
+    z-index: 4;
+
+}
+
+.nav-turkey:hover .nav-list-2-1 {
+    right: 223px;
+    top: -1px;
+}
+
+.nav-thailand:hover .nav-list-2-11 {
+    right: 223px;
+    top: 57px
+}
+
+.nav-winter:hover .nav-list-2-2 {
+    right: 223px;
+    top: 404px;
+}
+
+
+/* для футера */
+
+.footer {
+    margin-top: 5em;
+    background: rgb(14, 0, 77);
+    border-top: 2px solid rgb(203, 226, 0);
+    color: white;
+}
+
+.footer-container {
+    padding: 3em 2em;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 30px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+    color: rgb(64, 255, 0);
+}
+
+.footer-section p,
+.footer-section a {
+    color: rgb(220, 220, 220);
+    line-height: 1.7;
+}
+
+.footer-section a:hover {
+    color: rgb(255, 251, 0);
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1em;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    color: rgb(180, 180, 180);
+}
+
+@media(max-width: 1495px) {
+
+    .logo img {
+        width: 25em;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .super-burger:hover .nav-list {
+        display: block;
+        position: absolute;
+        right: 0px;
+        box-shadow: 0px 0px 5px rgb(255, 251, 0);
+        background-color: rgb(23, 0, 113);
+
+        border-radius: 15px;
+        z-index: 4;
+    }
+
+    .burger-container {
+        display: block;
+    }
+
+    .burger {
+        color: rgb(64, 255, 0);
+        border-radius: 5px;
+    }
+
+    .burger {
+        padding-inline: 0.8em;
+        padding-block: 0.3em;
+        background: none;
+        font-size: 2em;
+        cursor: pointer;
+        border: none
+    }
+
+    .burger:hover {
+        background-color: rgb(23, 0, 113);
+
+    }
+
+    .nav-countries-resorts:hover .nav-list-2 {
+        right: 196px;
+        top: 115px;
+    }
+
+    .nav-about-company:hover .nav-list-3 {
+        right: 196px;
+        top: 230px;
+    }
+
+    .nav-turkey:hover .nav-list-2-1,
+    .nav-thailand:hover .nav-list-2-11,
+    .nav-winter:hover .nav-list-2-2 {
+        right: 149px;
+
+    }
+
+
+}
+
+
+.btn-order {
+    display: inline-block;
+    background: rgb(64,255,0);
+    color: rgb(14,0,70);
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    font-family: Kelly Slab, serif;
+}
+
+.btn-order:hover {
+    background: rgb(203,226,0);
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgb(64,255,0);
+}
